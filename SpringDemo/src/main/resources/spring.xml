@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="alien1" class="org.naimish.Alien" autowire="byName">
+<!--        <constructor-arg value="21" type = "int"/>-->
+<!--        <constructor-arg ref="laptop1" type="org.naimish.Laptop"/>-->
+        <property name="age" value="21" />
+        <property name="computer">
+            <bean id="computer" class="org.naimish.Laptop" primary="true">
+            </bean>
+        </property>
+<!--        <constructor-arg value="21" index = "0"/>-->
+<!--        <constructor-arg ref="laptop1" index="1"/>-->
+<!--            <constructor-arg value="21" name = "age"/>-->
+<!--            <constructor-arg ref="laptop1" name="laptop"/>-->
+        </bean>
+
+    <!--    <bean id="alien2" class="org.naimish.Alien">-->
+
+<!--    </bean>-->
+
+<!--    <bean id="computer" class="org.naimish.Laptop" primary="true">-->
+<!--    </bean>-->
+<!--    <bean id="computer1" class="org.naimish.Desktop" lazy-init="true">-->
+<!--    </bean>-->
+
+</beans>
